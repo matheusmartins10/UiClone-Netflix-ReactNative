@@ -9,6 +9,13 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Movies from '../components/Movies'
 
+const api = [
+    require('../images/movie1.jpg'),
+	require('../images/movie2.jpg'),
+	require('../images/movie3.jpg'),
+	require('../images/movie4.jpg')
+]
+
 const Container = styled.ScrollView`
   flex: 1;
   background: #000;
@@ -48,6 +55,10 @@ const Home = () => {
 
               </Gradient>
           </Poster>
+
+           <Movies label="Recomendados" item={api} />
+           <Movies label="Top 10" item={api}/>
+
        </Container>
 
        </>
